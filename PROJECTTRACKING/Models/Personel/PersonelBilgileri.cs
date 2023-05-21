@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROJECTTRACKING.Models.ProjeTakip;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +11,10 @@ namespace PROJECTTRACKING.Models.Personel
 {
     public class PersonelBilgileri
     {
+        public PersonelBilgileri()
+        {
+            this.PersonelProjeleris = new HashSet<PersonelProjeleri>();
+        }
         [Key]
         public int PersonelBilgileriId { get; set; }
         [DisplayName("E-POSTA")]
@@ -58,6 +63,7 @@ namespace PROJECTTRACKING.Models.Personel
         [DisplayName("İŞE GİRİŞ TARİHİ")]
         public DateTime? İseGirisTarihi { get; set; }
 
+        public virtual ICollection<PersonelProjeleri> PersonelProjeleris { get; set; }
 
 
     }
