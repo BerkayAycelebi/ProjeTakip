@@ -1,0 +1,98 @@
+﻿@model PROJECTTRACKING.Models.Personel.PersonelBilgileri
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+     
+        <div class="card mb-4">
+            <h5 class="card-header">Profile Detayları</h5>
+            <!-- Account -->
+
+            <hr class="my-0">
+            <div class="card-body">
+                <form id="formAccountSettings" method="POST" onsubmit="return false">
+                    <div class="row">
+                        <div class="mb-3 col-md-6">
+                            <label for="firstName" class="form-label">AD SOYAD:</label>
+                            <input readonly class="form-control" type="text" id="firstName" name="firstName" value="@Html.DisplayFor(model => model.AdSoyad)" autofocus="">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="lastName" class="form-label">DEPARTMAN:</label>
+                            <input class="form-control" type="text" name="lastName" id="lastName" readonly value="  @Html.DisplayFor(model => model.Departman)">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="email" class="form-label">E-POSTA:</label>
+                            <input class="form-control" type="text" id="email" name="email" readonly value=" @Html.DisplayFor(model => model.Eposta)">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="organization" class="form-label">TELEFON:</label>
+                            <input type="text" class="form-control" id="organization" name="organization" readonly value="    @Html.DisplayFor(model => model.TelNo)">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label class="form-label" for="phoneNumber">YETKİ:</label>
+                            <div class="input-group input-group-merge">
+
+                                <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" readonly value="   @Html.DisplayFor(model => model.Yetki)">
+                            </div>
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="address" class="form-label">TC NO:</label>
+                            <input type="text" class="form-control" id="address" name="address" readonly value=" @Html.DisplayFor(model => model.TCNO) ">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="state" class="form-label">DOĞUM TARİHİ:</label>
+                            <input class="form-control" type="text" id="state" name="state" readonly value="     @Html.DisplayFor(model => model.DogumTarihi)">
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">ADRES:</label>
+                            <input type="text" class="form-control" id="zipCode" name="zipCode" readonly value="       @Html.DisplayFor(model => model.Adres)" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">İŞE GİRİŞ TARİHİ:</label>
+                            <input type="text" class="form-control" readonly value="    @Html.DisplayFor(model => model.İseGirisTarihi)" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">MEDENİ HAL:</label>
+                            <input type="text" class="form-control" readonly value="          @Html.DisplayFor(model => model.MedeniHal)" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">GÖREV AÇIKLAMASI:</label>
+                            <input type="text" class="form-control" readonly value="    @Html.DisplayFor(model => model.PozisyonAciklama))" />
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">YAKIN BİLGİSİ:</label>
+                            <input type="text" class="form-control" readonly value="   @Html.DisplayFor(model => model.YakinBilgi)" />
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">YAKIN AD SOYAD:</label>
+                            <input type="text" class="form-control" readonly value="   @Html.DisplayFor(model => model.YakinAdSoyad)" />
+                        </div>
+
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">YAKIN TC:</label>
+                            <input type="text" class="form-control" readonly value="   @Html.DisplayFor(model => model.YakinTC)" />
+                        </div>
+                        <div class="mb-3 col-md-6">
+                            <label for="zipCode" class="form-label">YAKIN TEL:</label>
+                            <input type="text" class="form-control" readonly value="             @Html.DisplayFor(model => model.TelNo)" />
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <a href="/PersonelBilgileris/Index" type="submit" class="btn btn-primary me-2">Anasayfaya Dön</a>
+                    
+                    </div>
+                </form>
+            </div>
+            <!-- /Account -->
+        </div>
+        
+    </div>
+</div>
+
+
