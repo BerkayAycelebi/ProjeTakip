@@ -27,6 +27,8 @@ namespace PROJECTTRACKING.Models.Personel
         public string Yetki { get; set; }
         [DisplayName("AD SOYAD")]
         [StringLength(50, ErrorMessage = "Maksimum uzunluk 50 karakterden fazla olamaz.")]
+
+  
         public string AdSoyad { get; set; }
         [DisplayName("TC KİMLİK NO")]
         [StringLength(11, ErrorMessage = "Maksimum uzunluk 11 karakterden fazla olamaz.")]
@@ -62,6 +64,9 @@ namespace PROJECTTRACKING.Models.Personel
         public DateTime DogumTarihi { get; set; }
         [DisplayName("İŞE GİRİŞ TARİHİ")]
         public DateTime? İseGirisTarihi { get; set; }
+
+        [DisplayName("PERSONEL GÖRSELİ")]
+        public string PersonelGorseli { get; set; }
 
         public virtual ICollection<PersonelProjeleri> PersonelProjeleris { get; set; }
 
